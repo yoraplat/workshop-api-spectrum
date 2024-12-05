@@ -1,0 +1,121 @@
+.loading-state {
+  background-image: url(/assets/spinner.gif);
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Main Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input and Button Styling */
+#prompt {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+#options {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.option-item {
+  display: inline-block;
+}
+
+#prompt:focus {
+  box-shadow: 0 0 5px #4a90e2;
+}
+
+#generate {
+  background-color: #4a90e2;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#generate:hover {
+  background-color: #357abd;
+}
+
+/* Output Container */
+#output {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+#generated-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #prompt {
+    font-size: 0.9rem;
+  }
+
+  #generate {
+    font-size: 0.9rem;
+  }
+}
