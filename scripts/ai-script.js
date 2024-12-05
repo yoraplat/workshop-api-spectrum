@@ -14,13 +14,13 @@ $(document).ready(function () {
       "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4";
     const API_URL_SLOW =
       "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev";
-    const API_TOKEN = "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";
+    const ACCESS_TOKEN = "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";
 
     $.ajax({
       url: generationType !== "fast" ? API_URL_SLOW : API_URL_FAST,
       type: "POST",
       headers: {
-        Authorization: `Bearer ${API_TOKEN}`,
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
       },
       contentType: "application/json",
       data: JSON.stringify({

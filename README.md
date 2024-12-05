@@ -47,3 +47,4 @@ De applicatie toont de ontvangen gegevens aan de gebruiker, bijvoorbeeld:
         |  
         ▼  
 [Applicatie toont de data]
+```
