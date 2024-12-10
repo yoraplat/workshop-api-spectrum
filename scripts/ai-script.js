@@ -12,12 +12,32 @@ $(document).ready(function () {
     const generationType = $("input[name='generationType']:checked").val();
     const API_URL_FAST =
       "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4";
+
     const API_URL_SLOW =
       "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev";
+
+    const API_URL_TEXT_TO_SPEECH =
+      "https://api-inference.huggingface.co/models/microsoft/speecht5_tts";
+
     const ACCESS_TOKEN = "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";
+  
+    let activeApiUrl;
+
+    switch (generationType) {
+      case 'slow':
+        activeApiUrl =  API_URL_SLOW;
+        break;
+      case 'speech':
+        activeApiUrl =  API_URL_TEXT_TO_SPEECH;
+        break; 
+      case 'fast':
+      default:
+        activeApiUrl =  API_URL_FAST;
+        break;
+    }
 
     $.ajax({
-      url: generationType !== "fast" ? API_URL_SLOW : API_URL_FAST,
+      url: activeApiUrl,
       type: "POST",
       headers: {
         Authorization: `Bearer ${ACCESS_TOKEN}`,
@@ -31,6 +51,7 @@ $(document).ready(function () {
         generatedImageEl.hide();
       },
       success: function (response, status, xhr) {
+        console.log(response)
         const reader = new FileReader();
         reader.onload = function (event) {
           $("#generated-image").attr("src", event.target.result).show();
