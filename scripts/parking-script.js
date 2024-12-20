@@ -1,27 +1,6 @@
-const apiUrl =
-  "https://data.stad.gent/api/explore/v2.1/catalog/datasets/bezetting-parkeergarages-real-time/records?limit=-1";
-const refreshBtn = $(".refreshBtn");
-const autoRefreshCheckbox = $("#auto-load");
+const apiUrl = "https://data.stad.gent/api/explore/v2.1/catalog/datasets/bezetting-parkeergarages-real-time/records?limit=-1";
 const spinner = $(".loading-state");
 const container = $(".parking-status-container");
-
-let autoLoadInterval = null;
-
-refreshBtn.on("click", function (btn) {
-  btn.preventDefault();
-  fetchData(apiUrl);
-});
-
-autoRefreshCheckbox.on("change", function (checkbox) {
-  if (!checkbox.target.checked) {
-    clearInterval(autoLoadInterval);
-    return;
-  }
-
-  autoLoadInterval = setInterval(function () {
-    fetchData(apiUrl);
-  }, 5000);
-});
 
 function fetchData(url) {
   $.ajax({

@@ -1,3 +1,10 @@
+# Stappen
+- Tonen wat gemaakt zal worden
+- Open data site tonen
+- Link tussen open data en voorbeeld
+- JSON uitleggen
+- 
+
 # Opdrachten
 - Correcte data velden toewijzen in de generateInfoTemplate() functie
 - Aantal vrije parkeerplaatsen berekenen

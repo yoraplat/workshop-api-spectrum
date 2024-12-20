@@ -15,36 +15,6 @@ body {
   padding: 40px;
 }
 
-.toolbar {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 40px;
-}
-
-.toolbar > *:not(:first-child) {
-  margin-left: 20px;
-}
-
-.auto-load-container {
-  display: inline-flex;
-}
-
-.refreshBtn {
-  display: inline-block;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border: 2px solid black;
-  transition: 0.3s;
-}
-
-.refreshBtn:hover {
-  background-color: white;
-  border-color: black;
-  color: black;
-}
-
 .parking-status-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
