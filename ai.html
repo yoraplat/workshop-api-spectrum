@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI</title>
+  <link rel="stylesheet" href="./styles/ai-stylesheet.css">
+</head>
+
+<body>
+  <h1>Genereer een afbeelding</h1>
+  <div>
+    <input type="text" id="prompt" placeholder="Geef een beschrijving" style="width: 300px;">
+  </div>
+  <div id="options">
+    <div class="option-item">
+      <span>Snelheid:</span>
+      <label for="generate-fast">
+        <input type="radio" name="generationType" value="fast" checked id="generate-fast">
+        Snel
+      </label>
+    </div>
+    <div class="option-item">
+      <label for="generate-slow">
+        <input type="radio" name="generationType" value="slow" id="generate-slow">
+        Traag
+      </label>
+    </div>
+    <div class="option-item">
+      <label for="speech">
+        <input type="radio" name="generationType" value="speech" id="speech">
+        Text-to-speech
+      </label>
+    </div>
+  </div>
+  <button id="generate">Genereer</button>
+  <div id="output" style="margin-top: 20px;">
+    <div class="loading-state" style="display: none;"></div>
+    <img id="generated-image" style="max-width: 100%; display: none;" alt="Generated">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./scripts/ai-script.js"></script>
+</body>
+
+</html>
